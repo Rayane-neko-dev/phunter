@@ -42,12 +42,13 @@ These issues will be addressed in future versions.
 
 
 # coded by rayane-neko-dev
-#      /\_/\  
-#     ( o.o )    Meow~  
-#     /     \ 
-#    (       )  
-#    ( /   \ ) 
-#
+
+     /\_/\  
+    ( o.o )    Meow~  
+    /     \ 
+   (       )  
+   ( /   \ ) 
+   
 #
 
 
